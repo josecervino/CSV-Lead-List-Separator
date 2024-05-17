@@ -10,6 +10,7 @@ if (!csvPath) {
 function getLeadListName() {
     const splitCsvPath = csvPath.split("/");
     const listName = splitCsvPath[splitCsvPath.length - 1];
+    listName = listName.replace(/\.csv$/, '');
 
     return listName;
 }
